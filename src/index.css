@@ -1,13 +1,85 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  width: 100vw;
+  background: #fff;
+  color: #222;
+  font-family: "Montserrat", san-serif;
+  font-weight: 300;
 }
+
+.wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 50px auto;
+}
+
+header .logo {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+header ul.nav {
+  float: right;
+  list-style: none;
+}
+
+header ul.nav li {
+  display: inline-block;
+  margin-left: 25px;
+  cursor: pointer;
+  transition: opacity 500ms easy;
+}
+
+header ul.nav li:hover {
+  opacity: 0.5
+}
+
+header .presentation {
+  margin: 50px auto;
+  background: url("./img/bg.jpeg");
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: multiplay;
+  background-color: #bcbcbc;
+  position: relative;
+}
+
+header .presentation:after {
+  content: "Лучшие товары для вашего дома";
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  width: 300px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+}
+
+header .presentation:before {
+  content: "по низким ценам";
+  font-size: 14px;
+  font-weight: 300;
+  top: 250px;
+  left: 50px;
+  width: 300px;
+  position: absolute;
+  color: #fff;
+}
+
+.footer {
+  text-aling: center;
+  margin-top: 100px;
+}
+
+
+
+

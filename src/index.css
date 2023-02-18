@@ -48,7 +48,7 @@ header .presentation {
   height: 500px;
   background-size: cover;
   background-position: center center;
-  background-blend-mode: multiplay;
+  background-blend-mode: multiply;
   background-color: #bcbcbc;
   position: relative;
 }
@@ -75,11 +75,64 @@ header .presentation:before {
   color: #fff;
 }
 
-.footer {
-  text-aling: center;
-  margin-top: 100px;
+main {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
+main .item {
+  position: relative;
+  padding-bottom: 20px;
+  width: 30%;
+  margin-bottom: 50px;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
 
+main .item img {
+  width: 100%;
+  border-radius: 10px 10px;
+  transition: transform 500ms ease;
+}
 
+main .item img:hover {
+  transform: scale(1.05);
+}
 
+main h2, main p, main b {
+  margin: 10px 20px;
+  color: #333;
+}
+
+main b {
+  color: #a85656;
+}
+
+main button {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #ca5252;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  transition: transform 500ms easy;
+}
+
+main button:hover {
+  transform: scale(1.5) translateY(-5px);
+}
+
+footer {
+  text-align: center;
+  margin-top: 100px;
+}

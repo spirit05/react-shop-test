@@ -4,7 +4,11 @@ class Item extends Component {
   render() {
     return (
       <div className="item">
-        <img src={"./img/products/" + this.props.item.img} alt="" />
+        <img
+          src={"./img/products/" + this.props.item.img}
+          alt=""
+          onClick={() => this.props.onShowFullItem(this.props.item)}
+        />
         <h2>{this.props.item.title}</h2>
         <p>{this.props.item.descr}</p>
         <b>{this.props.item.price}$</b>

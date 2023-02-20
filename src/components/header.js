@@ -2,13 +2,24 @@ import React, { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import Order from "./Order";
 
-const showOrders = (props) => (
-  <div>
-    {props.orders.map((el) => (
-      <Order key={el.id} item={el} />
-    ))}
-  </div>
-);
+const showOrders = (props) => {
+  return (
+    <div>
+      {props.orders.map((el) => (
+        <Order key={el.id} item={el} onDelete={props.onDelete} />
+      ))}
+      <p className="sum">
+        {`Сумма: 
+        ${props.orders
+          .reduce(
+            (acc, el) => (((acc += Number.parseFloat(el.price)), 10), acc),
+            0
+          )
+          .toFixed(2)}$`}
+      </p>
+    </div>
+  );
+};
 
 const showNothing = () => (
   <div className="empty">
